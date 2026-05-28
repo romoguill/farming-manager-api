@@ -44,7 +44,7 @@ func main() {
 	defer cancel()
 
 	if err := server.Shutdown(ctx); err != nil {
-		logger.Error("Failed to shutdown server within timeout", "error", err)
+		logger.Error("Failed to shutdown server", "error", err)
 		os.Exit(1)
 	}
 
